@@ -22,10 +22,10 @@ echo "<!DOCTYPE html>
     <meta charset=\"UTF-8\">
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
     <title>Document</title>
-    <link type=\"stylesheet\" href=\"$nom_projet/css/styles.css\"> 
+    <link rel=\"stylesheet\" href=\"css/styles.css\"> 
 </head>
 <body>
-    <script src=\"/js/script.js\"></script>
+    <script src=\"js/script.js\"></script>
 </body>
 </html>" >> $nom_projet/index.html
 
