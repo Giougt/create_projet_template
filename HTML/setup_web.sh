@@ -1,5 +1,16 @@
 #!/bin/bash
 
+#modele 
+'
+mon_projet/
+├── index.html
+├── README.md
+├── css/
+│   └── styles.css
+└── js/
+    └── script.js
+'
+
 #ask name for projet_folder
 echo "Veuillez entrer un nom de projet :"
 read nom_projet
