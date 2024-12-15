@@ -24,11 +24,12 @@ echo "Veuillez entrer un nom de projet :"
 read nom_projet
 
 #create directory
+mkdir $nom_projet
 mkdir $nom_projet/src $nom_projet/public $nom_projet/icons  
 mkdir $nom_projet/src/popup  $nom_projet/public/images $nom_projet/public/styles
 
 #create file 
-touch $nom_projet/src/popup/popup.html $nom_projet/src/popup/popup.js $nom_projet/src/popup/styles.css
+touch $nom_projet/src/popup/popup.html $nom_projet/src/popup/popup.js $nom_projet/public/styles/styles.css
 touch $nom_projet/src/background.js $nom_projet/src/content.js 
 touch $nom_projet/manifest.json
 touch $nom_projet/README.md
@@ -66,6 +67,6 @@ echo "{
         \" site \"
       ]
     }
-  ],
+  ]
 }
 " >> $nom_projet/manifest.json
