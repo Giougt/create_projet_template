@@ -4,6 +4,7 @@
 '
 my-chrome-extension/
 ├── manifest.json
+├── README.md
 ├── src/
 │   ├── background.js
 │   ├── content.js
@@ -15,9 +16,7 @@ my-chrome-extension/
 │   ├── images/
 │   └── styles/
 └── icons/
-    ├── icon16.png
-    ├── icon48.png
-    └── icon128.png
+    ├── iconExemple.png
 '
 
 #ask name for projet_folder
@@ -32,7 +31,7 @@ mkdir $nom_projet/src/popup  $nom_projet/public/images $nom_projet/public/styles
 touch $nom_projet/src/popup/popup.html $nom_projet/src/popup/popup.js $nom_projet/src/popup/styles.css
 touch $nom_projet/src/background.js $nom_projet/src/content.js 
 touch $nom_projet/manifest.json
-
+touch $nom_projet/README.md
 
 #complete file html 
 echo "<!DOCTYPE html>
@@ -47,3 +46,26 @@ echo "<!DOCTYPE html>
     <script src=\"../popup/popup.js\"></script>
 </body>
 </html>" >> $nom_projet/src/popup/popup.html
+
+#complete file manifest
+echo "{
+  \"manifest_version\": 3,
+  \"name\": \" \",
+  \"version\": \"1.0.0\",
+  \"description\": \" \",
+  \"icons\": {
+    \"48\": \" \",
+    \"128\": \" \"
+  },
+  \"content_scripts\": [
+    {
+      \"js\": [
+        \"/src/content.js\"
+      ],
+      \"matches\": [
+        \" site \"
+      ]
+    }
+  ],
+}
+" >> $nom_projet/manifest.json
